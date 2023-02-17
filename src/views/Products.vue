@@ -20,7 +20,14 @@
                 background-position: center;
               "
               :style="{ backgroundImage: `url(${product.imageUrl})` }"
-            ></div>
+              class="position-relative"
+            >
+              <router-link
+                class="d-block stretched-link"
+                :to="`/products/${product.id}`"
+                >{{ product.id }}</router-link
+              >
+            </div>
           </td>
           <td>{{ product.title }}</td>
           <td>
@@ -66,6 +73,7 @@
 <script>
 import UserProductModal from '@/components/UserProductModal.vue';
 import { mapState, mapActions } from 'pinia';
+import { RouterLink } from 'vue-router';
 import productsStore from '../store/cartsProductsStore';
 
 export default {
@@ -78,6 +86,7 @@ export default {
   },
   components: {
     UserProductModal,
+    RouterLink,
   },
   methods: {
     openModal(productId, qty = 1) {
