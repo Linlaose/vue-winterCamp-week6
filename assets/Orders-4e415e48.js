@@ -1,1 +1,0 @@
-import{_ as e,o as r,c as t}from"./index-d9436879.js";const n={name:"AdminOrders",data(){return{}}};function o(s,a,c,d,_,p){return r(),t("div",null,"這裡是 訂單列表")}const i=e(n,[["render",o]]);export{i as default};
